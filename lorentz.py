@@ -7,8 +7,6 @@ sc.c = 100
 x = []
 y = []
 z = []
-w = []
-
 
 for i in range(sc.c):
 
@@ -20,19 +18,16 @@ for i in range(sc.c):
 
     print(x,y)
 
+    v_rel = i/(g**2)
+
+    z.append(v_rel)
+
+    print(x,v_rel)
     
-    for j in range(10):
-
-        z.append(j)
-        
-        T_tonos = j*g
-
-        w.append(T_tonos)
-
-        print (z, w)
-    
-plt.plot(z,w)
+#Plot of relative speed.    
+plt.plot(x,z)
 plt.show()
 
+#Plot of Lorentz's factor.
 plt.plot(x,y)
 plt.show()
